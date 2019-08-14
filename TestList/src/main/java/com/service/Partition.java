@@ -37,5 +37,28 @@ public class Partition {
 		
 		return listResult;	
 	}
+	
+	
+	/** 
+	 * Ask Daily Coding problem
+	 * @param sum
+	 * @return
+	 */
+	public boolean isSumFromNumberInList(int sum) {
+		
+		for(int tmp :  this.list) {
+			if(tmp > sum) {
+				continue;
+			}else {
+				int diff = sum - tmp;
+				if(this.list.indexOf(diff) != -1 && this.list.indexOf(diff) != this.list.indexOf(tmp)) {
+					System.out.println("the two number is : "+ tmp +" + "+ diff);
+					return true;
+				}	
+			}
+		}
+		
+		return false;
+	}
 
 }

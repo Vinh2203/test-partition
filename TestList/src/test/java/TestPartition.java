@@ -127,5 +127,18 @@ public class TestPartition extends TestCase {
         assertEquals(listExpected, partition.divideList());
        
     }
+	
+	@Test
+    public void testPartition7() {
+		ArrayList<Integer> list = new ArrayList<>();
+		for(int cpt  = 0; cpt <= 7; cpt++) {
+			list.add(cpt);
+		}
+		
+        Partition partition = new Partition(list,6);
+        assertEquals(true, partition.isSumFromNumberInList(16));
+       
+    }
+
 
 }
